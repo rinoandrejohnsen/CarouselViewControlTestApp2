@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CarouselViewControlTestApp"
+             xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             x:Class="CarouselViewControlTestApp.MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        
+        <controls:CarouselViewControl 
+		    x:Name="carouselViewControl"
+            Grid.Row="0"
+		    ShowIndicators="true" 
+		    Arrows="true" 
+		    Orientation="Horizontal" 
+		    Bounces="false" />
+
+        <Button 
+            Grid.Row="1"
+            Command="{Binding NextPageCommand}">Go to next page</Button>
+    </Grid>
+</ContentPage>
